@@ -8,27 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		4A73731F1BCFD2A100536478 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A73731E1BCFD2A100536478 /* CoreBluetooth.framework */; };
-		4A73735B1BCFD92300536478 /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73732B1BCFD92300536478 /* PlaceAnnotation.m */; settings = {ASSET_TAGS = (); }; };
-		4A73735C1BCFD92300536478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73732D1BCFD92300536478 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		4A73735D1BCFD92300536478 /* ARCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73732F1BCFD92300536478 /* ARCameraViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4A73735E1BCFD92300536478 /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373321BCFD92300536478 /* ARCoordinate.m */; settings = {ASSET_TAGS = (); }; };
-		4A73735F1BCFD92300536478 /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373341BCFD92300536478 /* ARGeoCoordinate.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373601BCFD92300536478 /* ARKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373361BCFD92300536478 /* ARKit.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373611BCFD92300536478 /* AugmentedRealityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73733A1BCFD92300536478 /* AugmentedRealityController.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373621BCFD92300536478 /* GEOLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73733C1BCFD92300536478 /* GEOLocations.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373631BCFD92300536478 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A73733E1BCFD92300536478 /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
-		4A7373641BCFD92300536478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7373401BCFD92300536478 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		4A7373651BCFD92300536478 /* BeaconInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373441BCFD92300536478 /* BeaconInfoModel.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373661BCFD92300536478 /* IGBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373471BCFD92300536478 /* IGBLEManager.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373671BCFD92300536478 /* IGDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73734A1BCFD92300536478 /* IGDataManager.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373681BCFD92300536478 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A73734B1BCFD92300536478 /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		4A7373691BCFD92300536478 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A73734C1BCFD92300536478 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		4A73736A1BCFD92300536478 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73734D1BCFD92300536478 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		4A73736B1BCFD92300536478 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373501BCFD92300536478 /* Place.m */; settings = {ASSET_TAGS = (); }; };
-		4A73736C1BCFD92300536478 /* PlaceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373521BCFD92300536478 /* PlaceLoader.m */; settings = {ASSET_TAGS = (); }; };
-		4A73736D1BCFD92300536478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373541BCFD92300536478 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4A73736E1BCFD92300536478 /* MarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373571BCFD92300536478 /* MarkerView.m */; settings = {ASSET_TAGS = (); }; };
-		4A7373701BCFD92300536478 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A73735A1BCFD92300536478 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
+		4A73735B1BCFD92300536478 /* PlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73732B1BCFD92300536478 /* PlaceAnnotation.m */; };
+		4A73735C1BCFD92300536478 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73732D1BCFD92300536478 /* AppDelegate.m */; };
+		4A73735D1BCFD92300536478 /* ARCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73732F1BCFD92300536478 /* ARCameraViewController.m */; };
+		4A73735E1BCFD92300536478 /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373321BCFD92300536478 /* ARCoordinate.m */; };
+		4A73735F1BCFD92300536478 /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373341BCFD92300536478 /* ARGeoCoordinate.m */; };
+		4A7373601BCFD92300536478 /* ARKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373361BCFD92300536478 /* ARKit.m */; };
+		4A7373611BCFD92300536478 /* AugmentedRealityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73733A1BCFD92300536478 /* AugmentedRealityController.m */; };
+		4A7373621BCFD92300536478 /* GEOLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73733C1BCFD92300536478 /* GEOLocations.m */; };
+		4A7373631BCFD92300536478 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A73733E1BCFD92300536478 /* LaunchScreen.xib */; };
+		4A7373641BCFD92300536478 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7373401BCFD92300536478 /* Main.storyboard */; };
+		4A7373651BCFD92300536478 /* BeaconInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373441BCFD92300536478 /* BeaconInfoModel.m */; };
+		4A7373661BCFD92300536478 /* IGBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373471BCFD92300536478 /* IGBLEManager.m */; };
+		4A7373671BCFD92300536478 /* IGDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73734A1BCFD92300536478 /* IGDataManager.m */; };
+		4A7373681BCFD92300536478 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A73734B1BCFD92300536478 /* Images.xcassets */; };
+		4A7373691BCFD92300536478 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A73734C1BCFD92300536478 /* Info.plist */; };
+		4A73736A1BCFD92300536478 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A73734D1BCFD92300536478 /* main.m */; };
+		4A73736B1BCFD92300536478 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373501BCFD92300536478 /* Place.m */; };
+		4A73736C1BCFD92300536478 /* PlaceLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373521BCFD92300536478 /* PlaceLoader.m */; };
+		4A73736D1BCFD92300536478 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373541BCFD92300536478 /* ViewController.m */; };
+		4A73736E1BCFD92300536478 /* MarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7373571BCFD92300536478 /* MarkerView.m */; };
+		4A7373701BCFD92300536478 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A73735A1BCFD92300536478 /* Info.plist */; };
 		5C4812AA1BCEBF58004DFE59 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4812A91BCEBF58004DFE59 /* MapKit.framework */; };
 		5C7C41C71A5671B8004D2ED1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C41C01A567162004D2ED1 /* AVFoundation.framework */; };
 		5C7C41C81A5671BE004D2ED1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C41C21A567171004D2ED1 /* CoreLocation.framework */; };
@@ -36,6 +36,35 @@
 		5C7C41D11A567811004D2ED1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C41CD1A5677FC004D2ED1 /* UIKit.framework */; };
 		5C7C41D21A567816004D2ED1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C41CF1A567804004D2ED1 /* Foundation.framework */; };
 		5C7C41D81A56868C004D2ED1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7C41D61A568681004D2ED1 /* CoreGraphics.framework */; };
+		C4FD6CE71BD0D10B004F8D95 /* earcon_cancel.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4FD6CB61BD0D10B004F8D95 /* earcon_cancel.wav */; };
+		C4FD6CE81BD0D10B004F8D95 /* earcon_done_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4FD6CB71BD0D10B004F8D95 /* earcon_done_listening.wav */; };
+		C4FD6CE91BD0D10B004F8D95 /* earcon_listening.wav in Resources */ = {isa = PBXBuildFile; fileRef = C4FD6CB81BD0D10B004F8D95 /* earcon_listening.wav */; };
+		C4FD6CEA1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CBC1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CEB1BD0D10B004F8D95 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CBE1BD0D10B004F8D95 /* NSString+URLEncoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CEC1BD0D10B004F8D95 /* NSURL+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CC01BD0D10B004F8D95 /* NSURL+Base.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CED1BD0D10B004F8D95 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CC21BD0D10B004F8D95 /* Base64Transcoder.c */; };
+		C4FD6CEE1BD0D10B004F8D95 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CC41BD0D10B004F8D95 /* hmac.c */; };
+		C4FD6CEF1BD0D10B004F8D95 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CC61BD0D10B004F8D95 /* sha1.c */; };
+		C4FD6CF01BD0D10B004F8D95 /* OAAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CC91BD0D10B004F8D95 /* OAAttachment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF11BD0D10B004F8D95 /* OACall.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CCB1BD0D10B004F8D95 /* OACall.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF21BD0D10B004F8D95 /* OAConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CCD1BD0D10B004F8D95 /* OAConsumer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF31BD0D10B004F8D95 /* OADataFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CCF1BD0D10B004F8D95 /* OADataFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF41BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CD11BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF51BD0D10B004F8D95 /* OAMutableURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CD31BD0D10B004F8D95 /* OAMutableURLRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF61BD0D10B004F8D95 /* OAPlaintextSignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CD51BD0D10B004F8D95 /* OAPlaintextSignatureProvider.m */; };
+		C4FD6CF71BD0D10B004F8D95 /* OAProblem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CD71BD0D10B004F8D95 /* OAProblem.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF81BD0D10B004F8D95 /* OARequestParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CD91BD0D10B004F8D95 /* OARequestParameter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CF91BD0D10B004F8D95 /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CDB1BD0D10B004F8D95 /* OAServiceTicket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CFA1BD0D10B004F8D95 /* OATestServer.rb in Resources */ = {isa = PBXBuildFile; fileRef = C4FD6CDD1BD0D10B004F8D95 /* OATestServer.rb */; };
+		C4FD6CFB1BD0D10B004F8D95 /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CDF1BD0D10B004F8D95 /* OAToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CFC1BD0D10B004F8D95 /* OATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CE11BD0D10B004F8D95 /* OATokenManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C4FD6CFD1BD0D10B004F8D95 /* README in Resources */ = {isa = PBXBuildFile; fileRef = C4FD6CE31BD0D10B004F8D95 /* README */; };
+		C4FD6CFE1BD0D10B004F8D95 /* SpeechConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD6CE51BD0D10B004F8D95 /* SpeechConstant.m */; };
+		C4FD6CFF1BD0D10B004F8D95 /* SpeechKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FD6CE61BD0D10B004F8D95 /* SpeechKit.framework */; };
+		C4FD6D011BD0D28C004F8D95 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FD6D001BD0D28C004F8D95 /* AudioToolbox.framework */; };
+		C4FD6D031BD0D29C004F8D95 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FD6D021BD0D29C004F8D95 /* CFNetwork.framework */; };
+		C4FD6D051BD0D2B0004F8D95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FD6D041BD0D2B0004F8D95 /* SystemConfiguration.framework */; };
+		C4FD6D071BD0D2BA004F8D95 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4FD6D061BD0D2BA004F8D95 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +116,56 @@
 		5C7C41CD1A5677FC004D2ED1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5C7C41CF1A567804004D2ED1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C7C41D61A568681004D2ED1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C4FD6CB61BD0D10B004F8D95 /* earcon_cancel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_cancel.wav; sourceTree = "<group>"; };
+		C4FD6CB71BD0D10B004F8D95 /* earcon_done_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_done_listening.wav; sourceTree = "<group>"; };
+		C4FD6CB81BD0D10B004F8D95 /* earcon_listening.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = earcon_listening.wav; sourceTree = "<group>"; };
+		C4FD6CBB1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+Parameters.h"; sourceTree = "<group>"; };
+		C4FD6CBC1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+Parameters.m"; sourceTree = "<group>"; };
+		C4FD6CBD1BD0D10B004F8D95 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		C4FD6CBE1BD0D10B004F8D95 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		C4FD6CBF1BD0D10B004F8D95 /* NSURL+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Base.h"; sourceTree = "<group>"; };
+		C4FD6CC01BD0D10B004F8D95 /* NSURL+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Base.m"; sourceTree = "<group>"; };
+		C4FD6CC21BD0D10B004F8D95 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		C4FD6CC31BD0D10B004F8D95 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		C4FD6CC41BD0D10B004F8D95 /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
+		C4FD6CC51BD0D10B004F8D95 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		C4FD6CC61BD0D10B004F8D95 /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
+		C4FD6CC71BD0D10B004F8D95 /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		C4FD6CC81BD0D10B004F8D95 /* OAAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAAttachment.h; sourceTree = "<group>"; };
+		C4FD6CC91BD0D10B004F8D95 /* OAAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAAttachment.m; sourceTree = "<group>"; };
+		C4FD6CCA1BD0D10B004F8D95 /* OACall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OACall.h; sourceTree = "<group>"; };
+		C4FD6CCB1BD0D10B004F8D95 /* OACall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OACall.m; sourceTree = "<group>"; };
+		C4FD6CCC1BD0D10B004F8D95 /* OAConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAConsumer.h; sourceTree = "<group>"; };
+		C4FD6CCD1BD0D10B004F8D95 /* OAConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAConsumer.m; sourceTree = "<group>"; };
+		C4FD6CCE1BD0D10B004F8D95 /* OADataFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OADataFetcher.h; sourceTree = "<group>"; };
+		C4FD6CCF1BD0D10B004F8D95 /* OADataFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OADataFetcher.m; sourceTree = "<group>"; };
+		C4FD6CD01BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		C4FD6CD11BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
+		C4FD6CD21BD0D10B004F8D95 /* OAMutableURLRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAMutableURLRequest.h; sourceTree = "<group>"; };
+		C4FD6CD31BD0D10B004F8D95 /* OAMutableURLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAMutableURLRequest.m; sourceTree = "<group>"; };
+		C4FD6CD41BD0D10B004F8D95 /* OAPlaintextSignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAPlaintextSignatureProvider.h; sourceTree = "<group>"; };
+		C4FD6CD51BD0D10B004F8D95 /* OAPlaintextSignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAPlaintextSignatureProvider.m; sourceTree = "<group>"; };
+		C4FD6CD61BD0D10B004F8D95 /* OAProblem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAProblem.h; sourceTree = "<group>"; };
+		C4FD6CD71BD0D10B004F8D95 /* OAProblem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAProblem.m; sourceTree = "<group>"; };
+		C4FD6CD81BD0D10B004F8D95 /* OARequestParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OARequestParameter.h; sourceTree = "<group>"; };
+		C4FD6CD91BD0D10B004F8D95 /* OARequestParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OARequestParameter.m; sourceTree = "<group>"; };
+		C4FD6CDA1BD0D10B004F8D95 /* OAServiceTicket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAServiceTicket.h; sourceTree = "<group>"; };
+		C4FD6CDB1BD0D10B004F8D95 /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAServiceTicket.m; sourceTree = "<group>"; };
+		C4FD6CDC1BD0D10B004F8D95 /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
+		C4FD6CDD1BD0D10B004F8D95 /* OATestServer.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = OATestServer.rb; sourceTree = "<group>"; };
+		C4FD6CDE1BD0D10B004F8D95 /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAToken.h; sourceTree = "<group>"; };
+		C4FD6CDF1BD0D10B004F8D95 /* OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAToken.m; sourceTree = "<group>"; };
+		C4FD6CE01BD0D10B004F8D95 /* OATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OATokenManager.h; sourceTree = "<group>"; };
+		C4FD6CE11BD0D10B004F8D95 /* OATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OATokenManager.m; sourceTree = "<group>"; };
+		C4FD6CE21BD0D10B004F8D95 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
+		C4FD6CE31BD0D10B004F8D95 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		C4FD6CE41BD0D10B004F8D95 /* SpeechConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeechConstant.h; sourceTree = "<group>"; };
+		C4FD6CE51BD0D10B004F8D95 /* SpeechConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeechConstant.m; sourceTree = "<group>"; };
+		C4FD6CE61BD0D10B004F8D95 /* SpeechKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpeechKit.framework; sourceTree = "<group>"; };
+		C4FD6D001BD0D28C004F8D95 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C4FD6D021BD0D29C004F8D95 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C4FD6D041BD0D2B0004F8D95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C4FD6D061BD0D2BA004F8D95 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +173,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FD6D071BD0D2BA004F8D95 /* Security.framework in Frameworks */,
+				C4FD6D051BD0D2B0004F8D95 /* SystemConfiguration.framework in Frameworks */,
+				C4FD6D031BD0D29C004F8D95 /* CFNetwork.framework in Frameworks */,
+				C4FD6D011BD0D28C004F8D95 /* AudioToolbox.framework in Frameworks */,
 				4A73731F1BCFD2A100536478 /* CoreBluetooth.framework in Frameworks */,
 				5C7C41C81A5671BE004D2ED1 /* CoreLocation.framework in Frameworks */,
 				5C4812AA1BCEBF58004DFE59 /* MapKit.framework in Frameworks */,
+				C4FD6CFF1BD0D10B004F8D95 /* SpeechKit.framework in Frameworks */,
 				5C7C41D81A56868C004D2ED1 /* CoreGraphics.framework in Frameworks */,
 				5C7C41D21A567816004D2ED1 /* Foundation.framework in Frameworks */,
 				5C7C41D11A567811004D2ED1 /* UIKit.framework in Frameworks */,
@@ -111,6 +195,7 @@
 		4A7373281BCFD92300536478 /* MobilityHackathon */ = {
 			isa = PBXGroup;
 			children = (
+				C4FD6CB51BD0D10B004F8D95 /* SpeechKit */,
 				4A7373291BCFD92300536478 /* Annotation */,
 				4A73732C1BCFD92300536478 /* AppDelegate.h */,
 				4A73732D1BCFD92300536478 /* AppDelegate.m */,
@@ -222,7 +307,6 @@
 			children = (
 				4A7373281BCFD92300536478 /* MobilityHackathon */,
 				4A7373581BCFD92300536478 /* MobilityHackathonTests */,
-				4A73731E1BCFD2A100536478 /* CoreBluetooth.framework */,
 				5C7C41C61A567182004D2ED1 /* FrameWork */,
 				5C7C41981A566F5F004D2ED1 /* Products */,
 			);
@@ -239,6 +323,11 @@
 		5C7C41C61A567182004D2ED1 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				4A73731E1BCFD2A100536478 /* CoreBluetooth.framework */,
+				C4FD6D061BD0D2BA004F8D95 /* Security.framework */,
+				C4FD6D041BD0D2B0004F8D95 /* SystemConfiguration.framework */,
+				C4FD6D021BD0D29C004F8D95 /* CFNetwork.framework */,
+				C4FD6D001BD0D28C004F8D95 /* AudioToolbox.framework */,
 				5C4812A91BCEBF58004DFE59 /* MapKit.framework */,
 				5C7C41D61A568681004D2ED1 /* CoreGraphics.framework */,
 				5C7C41CF1A567804004D2ED1 /* Foundation.framework */,
@@ -248,6 +337,83 @@
 				5C7C41C01A567162004D2ED1 /* AVFoundation.framework */,
 			);
 			name = FrameWork;
+			sourceTree = "<group>";
+		};
+		C4FD6CB51BD0D10B004F8D95 /* SpeechKit */ = {
+			isa = PBXGroup;
+			children = (
+				C4FD6CB61BD0D10B004F8D95 /* earcon_cancel.wav */,
+				C4FD6CB71BD0D10B004F8D95 /* earcon_done_listening.wav */,
+				C4FD6CB81BD0D10B004F8D95 /* earcon_listening.wav */,
+				C4FD6CB91BD0D10B004F8D95 /* OAuthConsumer */,
+				C4FD6CE41BD0D10B004F8D95 /* SpeechConstant.h */,
+				C4FD6CE51BD0D10B004F8D95 /* SpeechConstant.m */,
+				C4FD6CE61BD0D10B004F8D95 /* SpeechKit.framework */,
+			);
+			path = SpeechKit;
+			sourceTree = "<group>";
+		};
+		C4FD6CB91BD0D10B004F8D95 /* OAuthConsumer */ = {
+			isa = PBXGroup;
+			children = (
+				C4FD6CBA1BD0D10B004F8D95 /* Categories */,
+				C4FD6CC11BD0D10B004F8D95 /* Crypto */,
+				C4FD6CC81BD0D10B004F8D95 /* OAAttachment.h */,
+				C4FD6CC91BD0D10B004F8D95 /* OAAttachment.m */,
+				C4FD6CCA1BD0D10B004F8D95 /* OACall.h */,
+				C4FD6CCB1BD0D10B004F8D95 /* OACall.m */,
+				C4FD6CCC1BD0D10B004F8D95 /* OAConsumer.h */,
+				C4FD6CCD1BD0D10B004F8D95 /* OAConsumer.m */,
+				C4FD6CCE1BD0D10B004F8D95 /* OADataFetcher.h */,
+				C4FD6CCF1BD0D10B004F8D95 /* OADataFetcher.m */,
+				C4FD6CD01BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.h */,
+				C4FD6CD11BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.m */,
+				C4FD6CD21BD0D10B004F8D95 /* OAMutableURLRequest.h */,
+				C4FD6CD31BD0D10B004F8D95 /* OAMutableURLRequest.m */,
+				C4FD6CD41BD0D10B004F8D95 /* OAPlaintextSignatureProvider.h */,
+				C4FD6CD51BD0D10B004F8D95 /* OAPlaintextSignatureProvider.m */,
+				C4FD6CD61BD0D10B004F8D95 /* OAProblem.h */,
+				C4FD6CD71BD0D10B004F8D95 /* OAProblem.m */,
+				C4FD6CD81BD0D10B004F8D95 /* OARequestParameter.h */,
+				C4FD6CD91BD0D10B004F8D95 /* OARequestParameter.m */,
+				C4FD6CDA1BD0D10B004F8D95 /* OAServiceTicket.h */,
+				C4FD6CDB1BD0D10B004F8D95 /* OAServiceTicket.m */,
+				C4FD6CDC1BD0D10B004F8D95 /* OASignatureProviding.h */,
+				C4FD6CDD1BD0D10B004F8D95 /* OATestServer.rb */,
+				C4FD6CDE1BD0D10B004F8D95 /* OAToken.h */,
+				C4FD6CDF1BD0D10B004F8D95 /* OAToken.m */,
+				C4FD6CE01BD0D10B004F8D95 /* OATokenManager.h */,
+				C4FD6CE11BD0D10B004F8D95 /* OATokenManager.m */,
+				C4FD6CE21BD0D10B004F8D95 /* OAuthConsumer.h */,
+				C4FD6CE31BD0D10B004F8D95 /* README */,
+			);
+			path = OAuthConsumer;
+			sourceTree = "<group>";
+		};
+		C4FD6CBA1BD0D10B004F8D95 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C4FD6CBB1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.h */,
+				C4FD6CBC1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.m */,
+				C4FD6CBD1BD0D10B004F8D95 /* NSString+URLEncoding.h */,
+				C4FD6CBE1BD0D10B004F8D95 /* NSString+URLEncoding.m */,
+				C4FD6CBF1BD0D10B004F8D95 /* NSURL+Base.h */,
+				C4FD6CC01BD0D10B004F8D95 /* NSURL+Base.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C4FD6CC11BD0D10B004F8D95 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				C4FD6CC21BD0D10B004F8D95 /* Base64Transcoder.c */,
+				C4FD6CC31BD0D10B004F8D95 /* Base64Transcoder.h */,
+				C4FD6CC41BD0D10B004F8D95 /* hmac.c */,
+				C4FD6CC51BD0D10B004F8D95 /* hmac.h */,
+				C4FD6CC61BD0D10B004F8D95 /* sha1.c */,
+				C4FD6CC71BD0D10B004F8D95 /* sha1.h */,
+			);
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +473,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FD6CFD1BD0D10B004F8D95 /* README in Resources */,
+				C4FD6CE71BD0D10B004F8D95 /* earcon_cancel.wav in Resources */,
 				4A7373691BCFD92300536478 /* Info.plist in Resources */,
 				4A7373681BCFD92300536478 /* Images.xcassets in Resources */,
+				C4FD6CFA1BD0D10B004F8D95 /* OATestServer.rb in Resources */,
 				4A7373631BCFD92300536478 /* LaunchScreen.xib in Resources */,
+				C4FD6CE91BD0D10B004F8D95 /* earcon_listening.wav in Resources */,
 				4A7373701BCFD92300536478 /* Info.plist in Resources */,
+				C4FD6CE81BD0D10B004F8D95 /* earcon_done_listening.wav in Resources */,
 				4A7373641BCFD92300536478 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,22 +493,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FD6CFB1BD0D10B004F8D95 /* OAToken.m in Sources */,
+				C4FD6CEB1BD0D10B004F8D95 /* NSString+URLEncoding.m in Sources */,
+				C4FD6CEA1BD0D10B004F8D95 /* NSMutableURLRequest+Parameters.m in Sources */,
+				C4FD6CF21BD0D10B004F8D95 /* OAConsumer.m in Sources */,
 				4A7373621BCFD92300536478 /* GEOLocations.m in Sources */,
+				C4FD6CFC1BD0D10B004F8D95 /* OATokenManager.m in Sources */,
+				C4FD6CF01BD0D10B004F8D95 /* OAAttachment.m in Sources */,
 				4A7373661BCFD92300536478 /* IGBLEManager.m in Sources */,
 				4A73735E1BCFD92300536478 /* ARCoordinate.m in Sources */,
+				C4FD6CF81BD0D10B004F8D95 /* OARequestParameter.m in Sources */,
 				4A73735C1BCFD92300536478 /* AppDelegate.m in Sources */,
+				C4FD6CEF1BD0D10B004F8D95 /* sha1.c in Sources */,
+				C4FD6CEC1BD0D10B004F8D95 /* NSURL+Base.m in Sources */,
 				4A73736E1BCFD92300536478 /* MarkerView.m in Sources */,
+				C4FD6CF41BD0D10B004F8D95 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
 				4A73736C1BCFD92300536478 /* PlaceLoader.m in Sources */,
 				4A7373671BCFD92300536478 /* IGDataManager.m in Sources */,
 				4A7373611BCFD92300536478 /* AugmentedRealityController.m in Sources */,
 				4A73735D1BCFD92300536478 /* ARCameraViewController.m in Sources */,
+				C4FD6CF91BD0D10B004F8D95 /* OAServiceTicket.m in Sources */,
+				C4FD6CFE1BD0D10B004F8D95 /* SpeechConstant.m in Sources */,
 				4A7373601BCFD92300536478 /* ARKit.m in Sources */,
+				C4FD6CF71BD0D10B004F8D95 /* OAProblem.m in Sources */,
+				C4FD6CED1BD0D10B004F8D95 /* Base64Transcoder.c in Sources */,
+				C4FD6CF51BD0D10B004F8D95 /* OAMutableURLRequest.m in Sources */,
 				4A73736D1BCFD92300536478 /* ViewController.m in Sources */,
+				C4FD6CEE1BD0D10B004F8D95 /* hmac.c in Sources */,
 				4A7373651BCFD92300536478 /* BeaconInfoModel.m in Sources */,
 				4A73735B1BCFD92300536478 /* PlaceAnnotation.m in Sources */,
+				C4FD6CF31BD0D10B004F8D95 /* OADataFetcher.m in Sources */,
 				4A73736A1BCFD92300536478 /* main.m in Sources */,
 				4A73735F1BCFD92300536478 /* ARGeoCoordinate.m in Sources */,
 				4A73736B1BCFD92300536478 /* Place.m in Sources */,
+				C4FD6CF11BD0D10B004F8D95 /* OACall.m in Sources */,
+				C4FD6CF61BD0D10B004F8D95 /* OAPlaintextSignatureProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +641,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Intelligrape Software (E55F3CBYAL)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MobilityHackathon/SpeechKit",
+				);
 				INFOPLIST_FILE = MobilityHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttndevelopment.CommunityTv;
@@ -467,6 +662,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Intelligrape Software (E55F3CBYAL)";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MobilityHackathon/SpeechKit",
+				);
 				INFOPLIST_FILE = MobilityHackathon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ttndevelopment.CommunityTv;

@@ -12,6 +12,8 @@
 #import "ARCameraViewController.h"
 #import "Place.h"
 #import "IGDataManager.h"
+#import "AppDelegate.h"
+#import "SpeechConstant.h"
 
 NSString * const kNameKey = @"name";
 NSString * const kReferenceKey = @"reference";
@@ -20,6 +22,9 @@ NSString * const kLatitudeKeypath = @"geometry.location.lat";
 NSString * const kLongitudeKeypath = @"geometry.location.lng";
 
 @interface ViewController ()
+{
+    AppDelegate* appDelegate;
+}
 @property (weak, nonatomic) IBOutlet UISearchBar *searchLocation;
 @property (nonatomic,strong) IGBLEManager *bleManagerObj;
 @property (nonatomic,strong) IGDataManager *dataManagerObj;
@@ -27,6 +32,9 @@ NSString * const kLongitudeKeypath = @"geometry.location.lng";
 @property (strong, nonatomic) CLLocation *accurateLocationInformation;
 @property (nonatomic, strong) NSArray *locations;
 @end
+
+
+const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0xe5, 0x23, 0xab, 0xe0, 0x64, 0xff, 0xb4, 0xb3, 0x4e, 0x29, 0x75, 0x9a, 0xf7, 0x63, 0x65, 0x23, 0x4c, 0x24, 0xc7, 0x6a, 0x61, 0x26, 0xb9, 0x42, 0x5e, 0x47, 0xea, 0x08, 0x2f, 0x55, 0xd1, 0x15, 0x78, 0x7c, 0xf5, 0xdc, 0x7c, 0xa9, 0x90, 0xca, 0xd3, 0x05, 0x64, 0xca, 0x68, 0xc9, 0xed, 0xb4, 0xed, 0xb5, 0x1f, 0x4e, 0xdb, 0xd8, 0x91, 0x3a, 0x1f, 0x7b, 0x42};
 
 @implementation ViewController
 
@@ -49,6 +57,12 @@ NSString * const kLongitudeKeypath = @"geometry.location.lng";
     [_locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
     [_locationManager requestAlwaysAuthorization];
     [_locationManager startUpdatingLocation];
+    
+    appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    
+    [SpeechConstant setupSpeechKitConnection];
+    
+    self.vocalizer = [[SKVocalizer alloc] initWithLanguage:@"en_US" delegate:self];
     
     [_mapView setShowsUserLocation:YES];
 
@@ -183,5 +197,112 @@ NSString * const kLongitudeKeypath = @"geometry.location.lng";
     NSArray *beaconDataArray = [self.dataManagerObj getBeaconData];
     [self.bleManagerObj addBeacons:beaconDataArray];
 }
+
+
+# pragma mark - when record button is tapped
+
+- (IBAction)recordButtonTapped:(id)sender {
+    self.recordButton.selected = !self.recordButton.isSelected;
+    
+    if (self.recordButton.isSelected) {
+        self.voiceSearch = [[SKRecognizer alloc] initWithType:SKSearchRecognizerType
+                                                    detection:SKShortEndOfSpeechDetection
+                                                     language:@"en_US"
+                                                     delegate:self];
+    }
+    
+    // This will stop existing speech recognizer processes
+    else {
+        
+        if (self.voiceSearch) {
+            [self.voiceSearch stopRecording];
+            [self.voiceSearch cancel];
+        }
+        
+        if (self.isSpeaking) {
+            [self.vocalizer cancel];
+            self.isSpeaking = NO;
+        }
+        
+    }
+    
+}
+
+# pragma mark - SKRecognizer Delegate Methods
+
+- (void)recognizerDidBeginRecording:(SKRecognizer *)recognizer {
+    //self.messageLabel.text = @"Listening..";
+}
+
+- (void)recognizerDidFinishRecording:(SKRecognizer *)recognizer {
+    //self.messageLabel.text = @"Done Listening..";
+}
+
+
+- (void)recognizer:(SKRecognizer *)recognizer didFinishWithResults:(SKRecognition *)results {
+    long numOfResults = [results.results count];
+    
+    if (numOfResults > 0) {
+        // update the text of text field with best result from SpeechKit
+        _searchLocation.text = [results firstResult];
+        
+        [self.vocalizer speakString:[NSString stringWithFormat:@"You are looking for %@",
+                                    _searchLocation.text]];
+        
+        [self searchBarSearchButtonClicked:_searchLocation];
+    }
+    else
+    {
+        [self.vocalizer speakString:@"I am not able to understand Please say it again"];
+    }
+    
+    self.recordButton.selected = !self.recordButton.isSelected;
+    
+    
+    if (self.voiceSearch) {
+        [self.voiceSearch cancel];
+    }
+}
+
+- (void)recognizer:(SKRecognizer *)recognizer didFinishWithError:(NSError *)error suggestion:(NSString *)suggestion {
+    self.recordButton.selected = NO;
+    //self.messageLabel.text = @"Connection error";
+    //self.activityIndicator.hidden = YES;
+    
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                    message:[error localizedDescription]
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+
+
+# pragma mark - SKVocalizer Delegate Methods
+
+
+- (void)vocalizer:(SKVocalizer *)vocalizer willBeginSpeakingString:(NSString *)text {
+    self.isSpeaking = YES;
+}
+
+- (void)vocalizer:(SKVocalizer *)vocalizer didFinishSpeakingString:(NSString *)text withError:(NSError *)error {
+    if (error !=nil) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+        if (self.isSpeaking) {
+            [self.vocalizer cancel];
+        }
+    }
+    
+    self.isSpeaking = NO;
+}
+
 
 @end

@@ -17,6 +17,7 @@
 @synthesize distanceFromOrigin;
 @synthesize geoLocation;
 @synthesize displayView;
+@synthesize photoURL;
 
 - (float)angleFromCoordinate:(CLLocationCoordinate2D)first toCoordinate:(CLLocationCoordinate2D)second
 {
@@ -55,18 +56,19 @@
 	NSLog(@"distance from %@ is %f, angle is %f, azimuth is %f",[self title], [self distanceFromOrigin],angle,[self azimuth]);
 }
 
-+ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location locationTitle:(NSString *) titleOfLocation
++ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location locationTitle:(NSString *) titleOfLocation photoURL:(NSURL*)photoURL
 {
 	ARGeoCoordinate *newCoordinate	= [[ARGeoCoordinate alloc] init];
 	[newCoordinate setGeoLocation: location];
 	[newCoordinate setTitle: titleOfLocation];
+    [newCoordinate setPhotoURL:photoURL];
 	
 	return newCoordinate;
 }
 
-+ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location fromOrigin:(CLLocation *)origin
++ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location fromOrigin:(CLLocation *)origin photoURL:(NSURL*)photoURL;
 {
-	ARGeoCoordinate *newCoordinate = [ARGeoCoordinate coordinateWithLocation:location locationTitle:@""];
+	ARGeoCoordinate *newCoordinate = [ARGeoCoordinate coordinateWithLocation:location locationTitle:@"" photoURL:photoURL];
 	[newCoordinate calibrateUsingOrigin:origin];
 	return newCoordinate;
 }

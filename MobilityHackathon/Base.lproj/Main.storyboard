@@ -65,6 +65,15 @@
                                     <action selector="recordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="236-p6-vA4"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mvg-Jm-dRD">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="FeN-Fh-eoL"/>
+                                    <constraint firstAttribute="height" constant="37" id="Lsg-hY-QtC"/>
+                                </constraints>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -82,6 +91,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="K4z-oo-SDn" secondAttribute="bottom" id="hky-tG-Cc5"/>
                             <constraint firstItem="K4z-oo-SDn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iEF-nc-kgY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UfA-3g-3XR" secondAttribute="bottom" constant="8" id="jTN-af-BvH"/>
+                            <constraint firstItem="mvg-Jm-dRD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNq-nQ-Brr"/>
+                            <constraint firstItem="mvg-Jm-dRD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n9l-U0-i5O"/>
                             <constraint firstItem="hc9-wC-ufk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sL2-Ga-rlR"/>
                             <constraint firstAttribute="trailing" secondItem="K4z-oo-SDn" secondAttribute="trailing" id="uB1-0w-Nop"/>
                         </constraints>
@@ -95,6 +106,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="indicatorView" destination="mvg-Jm-dRD" id="gOl-fm-dTm"/>
                         <outlet property="mapView" destination="K4z-oo-SDn" id="f2R-8F-aKF"/>
                         <outlet property="recordButton" destination="qjs-Tw-GQt" id="Meh-UG-KvR"/>
                         <outlet property="searchLocation" destination="hc9-wC-ufk" id="PGg-dg-Rqb"/>

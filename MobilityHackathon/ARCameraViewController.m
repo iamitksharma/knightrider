@@ -10,7 +10,7 @@
 #import "MarkerView.h"
 #import "Place.h"
 
-@interface ARCameraViewController ()
+@interface ARCameraViewController ()<MarkerViewDelegate>
 
     @property (nonatomic, strong) AugmentedRealityController *arController;
     @property (nonatomic, strong) NSMutableArray *geoLocations;
@@ -55,7 +55,7 @@
     
     for (Place *place in _locations) {
 
-        ARGeoCoordinate *coordinate = [ARGeoCoordinate coordinateWithLocation:[place location] locationTitle:[place placeName]];
+        ARGeoCoordinate *coordinate = [ARGeoCoordinate coordinateWithLocation:[place location] locationTitle:[place placeName] photoURL:place.photoURL];
         [coordinate calibrateUsingOrigin:[_userLocation location]];
         
         MarkerView *markerView = [[MarkerView alloc] initWithCoordinate:coordinate delegate:self];
@@ -84,11 +84,19 @@
 #pragma mark - ARLocationDelegate
 
 - (void)didTapMarker:(ARGeoCoordinate *)coordinate {
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark
+
+- (void)didTouchMarkerView:(MarkerView *)markerView
+{
+    
 }
 
 /*

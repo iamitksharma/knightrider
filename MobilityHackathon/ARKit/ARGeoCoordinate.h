@@ -18,11 +18,13 @@
 @property (nonatomic, strong) CLLocation *geoLocation;
 @property (nonatomic, strong) UIView *displayView;
 @property (nonatomic) double distanceFromOrigin;
+@property (nonatomic, strong) NSURL *photoURL;
 
 - (float)angleFromCoordinate:(CLLocationCoordinate2D)first toCoordinate:(CLLocationCoordinate2D)second;
 
-+ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location locationTitle:(NSString*) titleOfLocation;
-+ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location fromOrigin:(CLLocation *)origin;
+
++ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location locationTitle:(NSString *) titleOfLocation photoURL:(NSURL*)photoURL;
++ (ARGeoCoordinate *)coordinateWithLocation:(CLLocation *)location fromOrigin:(CLLocation *)origin photoURL:(NSURL*)photoURL;
 
 - (void)calibrateUsingOrigin:(CLLocation *)origin;
 

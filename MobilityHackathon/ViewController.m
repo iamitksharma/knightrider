@@ -20,10 +20,13 @@ NSString * const kReferenceKey = @"reference";
 NSString * const kAddressKey = @"vicinity";
 NSString * const kLatitudeKeypath = @"geometry.location.lat";
 NSString * const kLongitudeKeypath = @"geometry.location.lng";
+//NSString * const apiKey = @"AIzaSyDEoaHOysgXIvUu8HC7Ut1FId3YdAs4Igc";
 
 @interface ViewController ()
 {
     AppDelegate* appDelegate;
+    __weak IBOutlet UIActivityIndicatorView *indicatorView;
+    
 }
 @property (weak, nonatomic) IBOutlet UISearchBar *searchLocation;
 @property (nonatomic,strong) IGBLEManager *bleManagerObj;
@@ -41,6 +44,7 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
 //@synthesize mapView;
 //@synthesize locationManager;
 - (IBAction)cameraClicked:(id)sender {
+    
     ARCameraViewController *cameraView = [self.storyboard instantiateViewControllerWithIdentifier:@"ARCameraViewController"];
     [self presentViewController:cameraView animated:YES completion:nil];
 }
@@ -67,6 +71,11 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
     [_mapView setShowsUserLocation:YES];
 
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [indicatorView setHidden:TRUE];
+    [indicatorView stopAnimating];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -80,6 +89,10 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
 #pragma mark - SearchBar Delegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     //NSLog(@"Search Text : %@", searchBar.text);
+    
+    [indicatorView setHidden:FALSE];
+    [indicatorView startAnimating];
+    
     [self searchForLocation];
     
     [searchBar resignFirstResponder];
@@ -111,6 +124,10 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
     
     [[PlaceLoader sharedInstance]loadPOIsForLocation:_accurateLocationInformation radius:1000  searchKey:_searchLocation.text
                                       successHandler:^(NSDictionary *response) {
+                                          
+                                          [indicatorView setHidden:TRUE];
+                                          [indicatorView stopAnimating];
+                                          
                                           if([[response objectForKey:@"status"] isEqualToString:@"OK"]) {
                                               
                                               id places = [response objectForKey:@"results"];
@@ -123,8 +140,26 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
                                                       
                                                       CLLocation *location = [[CLLocation alloc] initWithLatitude:[[resultsDict valueForKeyPath:kLatitudeKeypath] floatValue] longitude:[[resultsDict valueForKeyPath:kLongitudeKeypath] floatValue]];
                                                       
+                                                      NSString *photoRef = @"";
+                                                      NSString *url =  @"";
+                                                      if ([[resultsDict objectForKey:@"photos"] isKindOfClass:[NSArray class]]) {
+                                                          
+                                                          if ([[resultsDict objectForKey:@"photos"] count] > 0)
+                                                              photoRef = [[[resultsDict objectForKey:@"photos"] objectAtIndex:0] objectForKey:@"photo_reference"];
+                                                      }
                                                       
-                                                      Place *currentPlace = [[Place alloc] initWithLocation:location reference:[resultsDict objectForKey:kReferenceKey] name:[resultsDict objectForKey:kNameKey] address:[resultsDict objectForKey:kAddressKey]];
+                                                      if (photoRef == nil) {
+                                                          url = [resultsDict objectForKey:@"icon"];
+                                                          
+                                                      }
+                                                      else
+                                                      {
+                                                          url = [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/photo?photoreference=%@&key=%@&sensor=false&maxwidth=40&maxheight=40", photoRef, @"AIzaSyDEoaHOysgXIvUu8HC7Ut1FId3YdAs4Igc"];
+                                                      }
+                                                      
+                                                      
+                                                      
+                                                      Place *currentPlace = [[Place alloc] initWithLocation:location reference:[resultsDict objectForKey:kReferenceKey] name:[resultsDict objectForKey:kNameKey] address:[resultsDict objectForKey:kAddressKey] url:[NSURL URLWithString:url]];
                                                       
                                                       [temp addObject:currentPlace];
                                                       
@@ -141,6 +176,9 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
                                           }
                                           
                                       } errorHandler:^(NSError *error) {
+                                          
+                                          [indicatorView setHidden:TRUE];
+                                          [indicatorView stopAnimating];
                                           NSLog(@"Error: %@", error);
                                       }];
     
@@ -157,6 +195,8 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [indicatorView setHidden:FALSE];
+    [indicatorView startAnimating];
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
         [[segue destinationViewController] setDelegate:self];
         [[segue destinationViewController] setLocations:_locations];

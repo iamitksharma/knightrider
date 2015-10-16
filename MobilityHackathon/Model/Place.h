@@ -16,8 +16,9 @@
 @property (nonatomic, copy) NSString *reference;
 @property (nonatomic, copy) NSString *placeName;
 @property (nonatomic, copy) NSString *address;
+@property (nonatomic, copy) NSURL *photoURL;
 
 
-- (id)initWithLocation:(CLLocation *)location reference:(NSString *)reference name:(NSString *)name address:(NSString *)address;
+- (id)initWithLocation:(CLLocation *)location reference:(NSString *)reference name:(NSString *)name address:(NSString *)address url:(NSURL*)photoURL;
 
 @end

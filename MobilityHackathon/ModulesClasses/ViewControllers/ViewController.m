@@ -25,6 +25,9 @@ NSString * const kLongitudeKeypath = @"geometry.location.lng";
 @interface ViewController ()
 {
     AppDelegate* appDelegate;
+    
+    __weak IBOutlet MKMapView *mapView;
+    __weak IBOutlet UIButton *recordButton;
     __weak IBOutlet UIActivityIndicatorView *indicatorView;
     
 }
@@ -68,13 +71,15 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
     
     self.vocalizer = [[SKVocalizer alloc] initWithLanguage:@"en_US" delegate:self];
     
-    [_mapView setShowsUserLocation:YES];
+    [mapView setShowsUserLocation:YES];
 
 }
 -(void)viewWillAppear:(BOOL)animated
 {
     [indicatorView setHidden:TRUE];
     [indicatorView stopAnimating];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -110,19 +115,22 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
         
         MKCoordinateSpan span = MKCoordinateSpanMake(0.15, 0.15);
         MKCoordinateRegion region =  MKCoordinateRegionMake([lastLocation coordinate], span);
-        [_mapView setRegion:region animated:YES];
+        [mapView setRegion:region animated:YES];
         [manager stopUpdatingLocation];
+        
+        [self searchForLocation];
+
         
     }
 }
 
 -(void)searchForLocation{
     
-    NSMutableArray *annotationsToRemove = [[NSMutableArray alloc] initWithArray: _mapView.annotations];
-    [_mapView removeAnnotations:annotationsToRemove];
+    NSMutableArray *annotationsToRemove = [[NSMutableArray alloc] initWithArray: mapView.annotations];
+    [mapView removeAnnotations:annotationsToRemove];
 
     
-    [[PlaceLoader sharedInstance]loadPOIsForLocation:_accurateLocationInformation radius:1000  searchKey:_searchLocation.text
+    [[PlaceLoader sharedInstance]loadPOIsForLocation:_accurateLocationInformation radius:1000  searchKey:self.searchText
                                       successHandler:^(NSDictionary *response) {
                                           
                                           [indicatorView setHidden:TRUE];
@@ -165,7 +173,7 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
                                                       
                                                       
                                                       PlaceAnnotation *annotation = [[PlaceAnnotation alloc] initWithPlace:currentPlace];
-                                                      [_mapView addAnnotation:annotation];
+                                                      [mapView addAnnotation:annotation];
                                                   }
                                               }
                                               
@@ -200,7 +208,7 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
     if ([[segue identifier] isEqualToString:@"showAlternate"]) {
         [[segue destinationViewController] setDelegate:self];
         [[segue destinationViewController] setLocations:_locations];
-        [[segue destinationViewController] setUserLocation:[_mapView userLocation]];
+        [[segue destinationViewController] setUserLocation:[mapView userLocation]];
     }
 }
 
@@ -242,9 +250,9 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
 # pragma mark - when record button is tapped
 
 - (IBAction)recordButtonTapped:(id)sender {
-    self.recordButton.selected = !self.recordButton.isSelected;
+    recordButton.selected = !recordButton.isSelected;
     
-    if (self.recordButton.isSelected) {
+    if (recordButton.isSelected) {
         self.voiceSearch = [[SKRecognizer alloc] initWithType:SKSearchRecognizerType
                                                     detection:SKShortEndOfSpeechDetection
                                                      language:@"en_US"
@@ -296,7 +304,7 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
         [self.vocalizer speakString:@"I am not able to understand Please say it again"];
     }
     
-    self.recordButton.selected = !self.recordButton.isSelected;
+    recordButton.selected = !recordButton.isSelected;
     
     
     if (self.voiceSearch) {
@@ -305,7 +313,7 @@ const unsigned char SpeechKitApplicationKey[] = {0xa8, 0xa9, 0xe8, 0x6a, 0xc9, 0
 }
 
 - (void)recognizer:(SKRecognizer *)recognizer didFinishWithError:(NSError *)error suggestion:(NSString *)suggestion {
-    self.recordButton.selected = NO;
+    recordButton.selected = NO;
     //self.messageLabel.text = @"Connection error";
     //self.activityIndicator.hidden = YES;
     

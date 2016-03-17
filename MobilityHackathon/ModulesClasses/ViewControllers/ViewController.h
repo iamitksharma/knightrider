@@ -17,20 +17,20 @@
 
 
 @interface ViewController : UIViewController<CLLocationManagerDelegate, UISearchBarDelegate, MKMapViewDelegate, ARCameraViewControllerDelegate,IGBLEManagerDelegate,CBPeripheralManagerDelegate , SpeechKitDelegate, SKRecognizerDelegate, SKVocalizerDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
-
-@property (weak, nonatomic) IBOutlet UIButton *recordButton;
 
 @property (strong, nonatomic) SKRecognizer* voiceSearch;
 
 @property (strong, nonatomic) NSString* searchCriteria;
 
 @property (strong, nonatomic) SKVocalizer* vocalizer;
+
+@property (strong, nonatomic) NSString* searchText;
+
 @property BOOL isSpeaking;
 
-- (IBAction)recordButtonTapped:(id)sender;
 
 @end
 
